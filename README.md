@@ -22,6 +22,16 @@ A web-based application to manage student fee payments. This system is designed 
 
 ---
 
+## Interactive demo
+
+The browser demo uses fictional student and payment records. Try adding a student, recording a payment, and checking the updated dashboard. Demo changes reset when the page reloads.
+
+To preview locally, run `python3 -m http.server 8000 --directory docs` and open `http://localhost:8000/`.
+
+To publish the demo, open **Settings → Pages**, select **Deploy from a branch**, then choose **main** and **/docs**. The demo only needs static hosting.
+
+---
+
 ## 🚀 How to Run
 
 1. Install [XAMPP](https://www.apachefriends.org/)

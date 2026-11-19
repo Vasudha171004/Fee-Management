@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Fee Management System · Demo</title><link rel="stylesheet" href="original.css"><link rel="stylesheet" href="demo.css"><script src="demo.js" defer></script></head>
+<body>
+<header class="demo-header"><div class="demo-wrap header-inner"><div><strong>JNTUACEA</strong><span>Fee Management System</span></div><nav aria-label="Demo pages"><a href="#dashboard" aria-current="page">Dashboard</a><a href="#students">Students</a><a href="#fees">Fees</a></nav></div></header>
+<main class="demo-wrap">
+  <p class="demo-note">Project by Vasudha Rajoli · Demo data</p>
+  <section id="dashboard">
+    <h1>Dashboard</h1>
+    <div class="demo-stats"><article><h2>Total students</h2><strong id="count"></strong><a href="#students">View students</a></article><article><h2>Total fees collected</h2><strong id="total"></strong><a href="#fees">View fees</a></article></div>
+    <article class="demo-panel"><h2>Recent fee payments</h2><div class="demo-table"><table><thead><tr><th>Student</th><th>Reference</th><th>Amount paid</th><th>Date</th></tr></thead><tbody data-payments></tbody></table></div></article>
+  </section>
+  <section id="students" hidden>
+    <h1>Students</h1><details class="demo-form demo-panel"><summary>Add sample student</summary>
+    <form id="add-student" class="filters"><label>Student name<input name="name" required maxlength="60"></label><label>Admission number<input name="admission" required maxlength="20"></label><label>Branch<select name="branch"><option>CSE</option><option>ECE</option></select></label><label>Year<select name="year"><option>1</option><option>2</option><option>3</option><option>4</option></select></label><button type="submit">Add student</button></form><p role="status" id="student-status"></p></details><article class="demo-panel"><div class="filters"><label>Search students<input type="search" id="student-query" placeholder="Name or admission number"></label><label>Branch<select id="student-branch"><option value="">All branches</option><option>CSE</option><option>ECE</option></select></label></div>
+    <div class="demo-table"><table><thead><tr><th>Student name</th><th>Admission number</th><th>Stream</th><th>Branch</th><th>Year</th></tr></thead><tbody id="student-rows"></tbody></table></div></article>
+  </section>
+  <section id="fees" hidden>
+    <h1>Fee payments</h1><details class="demo-form demo-panel"><summary>Record sample payment</summary>
+    <form id="add-payment" class="filters"><label>Student<select name="student" id="payment-student" required></select></label><label>Amount (₹)<input name="amount" required type="number" step="0.01" min="0.01" max="1000000"></label><label>Reference<input name="reference" required maxlength="30"></label><button type="submit">Record payment</button></form><p role="status" id="payment-status"></p></details><article class="demo-panel"><div class="filters"><label>Search payments<input type="search" id="payment-query" placeholder="Student name or reference"></label></div><div class="demo-table"><table><thead><tr><th>Student</th><th>Reference</th><th>Amount paid</th><th>Date</th></tr></thead><tbody data-payments></tbody></table></div></article>
+  </section>
+  <footer class="demo-footer"><span>Fee Management System by Vasudha Rajoli</span><span>Demo changes reset on refresh</span></footer>
+</main></body></html>
